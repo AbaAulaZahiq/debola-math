@@ -44,7 +44,7 @@ export class App{
 		let ranges = [10, 20, 50, 100, 200, 500, 800, 1000]
 
 		let container = `<div class="range">
-			<h5 class='fw-bold'>Pilih Range Quiz</h5>
+			<h5 class='fw-bold'>Pilih Range Quiz <p class="back-to-type-btn text-secondary f-15px">kembali</p></h5>
 		`
 
 		ranges.forEach(r => {
@@ -71,9 +71,13 @@ export class App{
 		let container = `
 			<div class="ready-bar mt-5">			
 				<h1 align="center" class="fw-bold">Kamu Sudah Siap?</h1>
+				<h5 align="center" class="fw-bold text-secondary">Bermain quiz ${this.type}</h5>
+				<h5 align="center" class="fw-bold text-secondary">Dengan bilangan antara 0 - ${this.range}</h5>
+
 				<div class="center-center">			
 					<button class="ready-btn bg-primary bg-gradient btn btn-primary mx-auto my-3 btn-lg rounded-pill" id="">Mulai Sekarang</button>
-				</div>
+					<button class="back-to-range-btn btn text-secondary f-15px my-2 fw-bold">Kembali</button>			
+    				</div>
 			</div>
 		`
 
@@ -146,9 +150,12 @@ export class App{
 		let container = `
 			<div class="result-bar">
 				<h1 class="mb-3">Quiz Selesai</h1>
-				<h4>Jumlah Soal : <span>${this.amountQuestion - 1 /* menampilkan pertanyaan yang dijawab */}</span></h4>
-				<h4>Jawaban Benar : <span>${this.trueQuestion}</span></h4>
-				<h4>Jawaban Salah : <span>${this.falseQuestion}</span></h4>
+				<h5 class="fw-bold">Bermain quiz ${this.type}</h5>
+				<h5 class="fw-bold mb-4">Dengan bilangan antara 0 - ${this.range}</h5>
+    
+    				<h5>Jumlah Soal : <span>${this.amountQuestion - 1 /* menampilkan pertanyaan yang dijawab */}</span></h5>
+				<h5>Jawaban Benar : <span>${this.trueQuestion}</span></h5>
+				<h5>Jawaban Salah : <span>${this.falseQuestion}</span></h5>
 
 				<div class="between-center mt-3">					
 					<button class="replay-btn bg-gradient btn btn-outline-primary mx-auto my-3 btn-lg rounded-pill">Mulai Lagi</button>
@@ -210,7 +217,6 @@ export class App{
 	}
 
 	static checkAnswer(element){
-		console.log(this.inWrong)
 		if(this.inWrong) return false // jika user berada di kondisi salah maka jangan biarkan menjawab soal
 
 		let answer = element.getAttribute('value')
