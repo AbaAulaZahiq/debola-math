@@ -74,7 +74,7 @@ export class App{
 				<h5 align="center" class="fw-bold text-secondary">Bermain quiz ${this.type}</h5>
 				<h5 align="center" class="fw-bold text-secondary">Dengan bilangan antara 0 - ${this.range}</h5>
 
-				<div class="center-center">			
+				<div class="column">			
 					<button class="ready-btn bg-primary bg-gradient btn btn-primary mx-auto my-3 btn-lg rounded-pill" id="">Mulai Sekarang</button>
 					<button class="back-to-range-btn btn text-secondary f-15px my-2 fw-bold">Kembali</button>			
     				</div>
@@ -157,7 +157,7 @@ export class App{
 				<h5>Jawaban Benar : <span>${this.trueQuestion}</span></h5>
 				<h5>Jawaban Salah : <span>${this.falseQuestion}</span></h5>
 
-				<div class="column mt-3">					
+				<div class="center-center mt-3">					
 					<button class="replay-btn bg-gradient btn btn-outline-primary mx-auto my-3 btn-lg rounded-pill">Mulai Lagi</button>
 					<button class="home-btn bg-primary bg-gradient btn btn-primary mx-auto my-3 btn-lg rounded-pill">Ke Beranda</button>
 				</div>
