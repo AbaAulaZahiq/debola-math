@@ -14,11 +14,20 @@ document.addEventListener('click', function(e){
         App.setType(element)
         App.createQuizRange()        
     })
+	
+	ElementMethods.contains(element, 'back-to-type-btn').thenDo(function () {
+        App.createQuizType()        
+    })
+    
     
     ElementMethods.contains(element, 'range-box').thenDo(function () {
         App.setRange(element)        
         App.createPlayBar()        
         App.createReadyBar()        
+    })
+
+    ElementMethods.contains(element, 'back-to-range-btn').thenDo(function () {
+        App.createQuizRange()        
     })
     
     ElementMethods.contains(element, 'ready-btn').thenDo(function () {
