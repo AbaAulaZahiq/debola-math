@@ -44,7 +44,7 @@ export class App{
 		let ranges = [10, 20, 50, 100, 200, 500, 800, 1000]
 
 		let container = `<div class="range">
-			<h5 class='fw-bold'>Pilih Range Quiz <p class="back-to-type-btn text-secondary f-15px">kembali</p></h5>
+			<h5 class='fw-bold'>Pilih Range Quiz <p class="back-to-type-btn text-secondary f-15px us-none pointer">kembali</p></h5>
 		`
 
 		ranges.forEach(r => {
