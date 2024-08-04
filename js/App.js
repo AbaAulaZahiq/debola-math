@@ -157,7 +157,7 @@ export class App{
 				<h5>Jawaban Benar : <span>${this.trueQuestion}</span></h5>
 				<h5>Jawaban Salah : <span>${this.falseQuestion}</span></h5>
 
-				<div class="between-center mt-3">					
+				<div class="column mt-3">					
 					<button class="replay-btn bg-gradient btn btn-outline-primary mx-auto my-3 btn-lg rounded-pill">Mulai Lagi</button>
 					<button class="home-btn bg-primary bg-gradient btn btn-primary mx-auto my-3 btn-lg rounded-pill">Ke Beranda</button>
 				</div>
