@@ -1,8 +1,6 @@
 import {ElementMethods} from './ElementMethods.js' 
 import {App} from './App.js' 
 
-// App.createQuizType()
-
 document.addEventListener('click', function(e){
     let element = e.target
    
@@ -14,21 +12,30 @@ document.addEventListener('click', function(e){
         App.setType(element)
         App.createQuizRange()        
     })
-	
-	ElementMethods.contains(element, 'back-to-type-btn').thenDo(function () {
+
+    ElementMethods.contains(element, 'back-to-type-btn').thenDo(function () {
         App.createQuizType()        
     })
     
-    
     ElementMethods.contains(element, 'range-box').thenDo(function () {
         App.setRange(element)        
-        App.createPlayBar()        
-        App.createReadyBar()        
+        App.createQuizMode()  
     })
 
     ElementMethods.contains(element, 'back-to-range-btn').thenDo(function () {
         App.createQuizRange()        
     })
+
+    ElementMethods.contains(element, 'mode-box').thenDo(function () {
+        App.setMode(element)        
+        App.createPlayBar()        
+        App.createReadyBar()            
+    })
+
+    ElementMethods.contains(element, 'back-to-mode-btn').thenDo(function () {
+        App.createQuizMode()        
+    })
+
     
     ElementMethods.contains(element, 'ready-btn').thenDo(function () {
         App.createQuestionBar()        
