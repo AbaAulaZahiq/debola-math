@@ -236,16 +236,15 @@ export class App{
 				},
 				createQuestion: function() {
 					const type = Math.round(Math.random() * 2);
+					
+					const a = Math.floor(Math.random() * App.range);
+					const b = Math.floor(Math.random() * App.range);
 					if(type == 1){ //tentukan keliling
-						const a = Math.floor(Math.random() * App.range);
-						const b = Math.floor(Math.random() * App.range);
 						App.trueAnswer = 2*(a+b);
 					}else{ //tentuknan luas
-						const t = Math.floor(Math.random() * App.range);
-						const a = Math.floor(Math.random() * App.range);
-						App.trueAnswer = a * t;
+						App.trueAnswer = a * b;
 					}
-					let question = this.questionFormat(type, a,t)
+					let question = this.questionFormat(type, a,b)
 					
 					return {
 						question,
