@@ -418,16 +418,37 @@ class App{
 		this.range = 0;
 		this.type = '';
 		this.typeGroup = '';
-	
+
+		this.pointPlayers = {
+			'player-1' : {
+				trueQuestion : 0,
+				falseQuestion : 0,
+			}, 
+			'player-2' : {
+				trueQuestion : 0,
+				falseQuestion : 0,
+			}, 
+		}
 		this.inCheck = false;
 	}
 	
 	//utnuk "main lagi"
 	static endRound(){
 		this.amountQuestion = 1;
-        this.trueQuestion = 0;
-        this.falseQuestion = 0;
+        	this.trueQuestion = 0;
+        	this.falseQuestion = 0;
 		this.trueAnswer = 0;
+
+		this.pointPlayers = {
+			'player-1' : {
+				trueQuestion : 0,
+				falseQuestion : 0,
+			}, 
+			'player-2' : {
+				trueQuestion : 0,
+				falseQuestion : 0,
+			}, 
+		}
 	
 		this.inCheck = false;
 	}
