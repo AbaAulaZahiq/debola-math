@@ -429,7 +429,7 @@ let types = {
             createQuestion : function() {
                 let geometri = ['persegi', 'persegi panjang', 'lingkaran', 'segitiga', 'trapesium', 'jajar genjang']
                 let index = Math.floor(Math.random() * (geometri.length - 1))
-                let {question : question, answer : answer} = App.types[App.typeGroup][geometri[index]].createQuestion()
+                let {question : question, answer : answer} = types[App.typeGroup][geometri[index]].createQuestion()
                 
                 return {question, answer};
             }
